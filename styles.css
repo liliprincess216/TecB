@@ -1,0 +1,91 @@
+:root{--blue:#0a0af4;--red:#ff0920;--ink:#131313;--week-title-size:clamp(25px,2.1vw,35px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.page{width:min(100% - 5.4vw,1600px);margin:0 auto;padding-bottom:clamp(50px,7vw,120px)}
+.masthead{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:clamp(28px,4vw,70px);padding:clamp(25px,3.2vw,50px) 0 clamp(50px,5vw,90px)}
+.masthead h1{margin:0;color:var(--blue);font-size:clamp(50px,5.5vw,86px);font-weight:700;line-height:1;white-space:nowrap}
+.masthead__line{height:2px;background:var(--blue)}
+.project-banner{display:grid;place-items:center;min-height:clamp(54px,5vw,88px);margin-bottom:clamp(36px,3vw,50px);padding:12px 18px;background:var(--blue);color:#fff;font-size:clamp(22px,2.4vw,38px);font-weight:700;line-height:1.15;text-align:center}
+.project-section{margin-bottom:clamp(95px,11vw,185px)}
+.project-section:last-child{margin-bottom:0}
+.section-heading{position:relative;display:flex;align-items:center;min-height:72px;margin-bottom:8px;color:var(--blue)}
+.section-heading h2,.section-heading p{margin:0;font-weight:700;font-size:var(--week-title-size);line-height:1.2}
+.section-heading--centered p{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap}
+.week-description{width:100%;margin:0 0 24px;color:var(--ink);font-size:calc(var(--week-title-size)/2);line-height:1.5}
+.split-frame{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:2px solid var(--blue)}
+.split-frame>*+*{border-left:2px solid var(--blue)}
+.split-frame--square{min-height:min(44vw,690px)}
+.media-cell{margin:0;min-width:0;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:clamp(20px,3vw,48px)}
+.media-cell img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+.split-frame--square .media-cell img{width:100%;height:min(37vw,570px)}
+.split-frame--demo .media-cell--gif img{max-height:800px}
+.embed-cell{min-width:0;padding:clamp(10px,1.5vw,24px);display:flex;align-items:center;justify-content:center}
+.embed-cell iframe,.versus-cell iframe{display:block;width:100%;border:0;background:#fff}
+.split-frame--demo .media-cell--gif,.split-frame--demo .embed-cell{align-items:flex-start}
+.split-frame--demo .media-cell--gif{padding-top:24px}
+.split-frame--demo .embed-cell iframe{height:850px}
+.split-frame--comparison{grid-template-columns:1fr}
+.split-frame--comparison>*+*{border-left:0;border-top:2px solid var(--blue)}
+.split-frame--comparison .media-cell,.split-frame--comparison .embed-cell{padding:24px}
+.split-frame--comparison .media-cell img{width:100%;max-height:none}
+.split-frame--comparison .embed-cell iframe{height:clamp(500px,calc(36.3vw + 150px),780px)}
+.split-frame--final .embed-cell iframe{height:clamp(570px,calc(47.3vw + 126px),830px)}
+.split-frame--final .media-cell img{max-height:690px}
+.split-frame--final .media-cell--gif{padding-top:27px}
+.versus{display:flex;align-items:center;gap:12px}
+.dot{display:inline-block;width:clamp(23px,2.2vw,34px);aspect-ratio:1;border-radius:50%}
+.dot--blue{background:var(--blue)}
+.dot--red{background:var(--red)}
+.versus-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.versus-cell{position:relative;min-width:0;min-height:clamp(400px,42vw,680px);display:flex;align-items:center;justify-content:center;padding:70px 30px 24px;border:2px solid var(--blue);overflow:hidden}
+.versus-cell:nth-child(even){border-color:var(--red);border-left:0}
+.versus-cell:nth-child(n+3){border-top:0}
+.versus-cell img{display:block;max-width:100%;max-height:550px;object-fit:contain}
+.role-tab{position:absolute;top:0;left:0;z-index:1;width:clamp(150px,15vw,255px);margin:0;padding:13px 18px;background:var(--blue);color:#fff;font-size:clamp(18px,1.5vw,25px);font-style:italic;font-weight:400;text-align:center}
+.versus-cell--red .role-tab{background:var(--red)}
+.versus-cell--description{min-height:0;padding:64px 16px 12px}
+.versus-cell--description iframe{height:clamp(530px,calc(47.3vw + 72px),784px)}
+@media(max-width:850px){
+ .page{width:calc(100% - 32px)}
+ .masthead{padding-bottom:60px;gap:18px}
+ .project-section{margin-bottom:85px}
+ .section-heading{display:block;min-height:0;margin-bottom:16px}
+ .section-heading--centered p{position:static;transform:none;margin-top:6px;font-size:20px}
+ .split-frame{grid-template-columns:1fr}
+ .split-frame>*+*{border-left:0;border-top:2px solid var(--blue)}
+ .split-frame--square{min-height:0}
+ .split-frame--square .media-cell{min-height:330px}
+ .split-frame--square .media-cell img{height:auto;max-height:360px}
+ .split-frame--demo .media-cell--gif{min-height:420px}
+ .split-frame--demo .media-cell--gif img{max-height:500px}
+ .split-frame--comparison .media-cell{min-height:0}
+ .split-frame--comparison .media-cell,.split-frame--comparison .embed-cell{padding:16px}
+ .split-frame--comparison .embed-cell iframe{height:clamp(470px,calc(36vw + 150px),650px)}
+ .versus-cell{min-height:400px;padding:70px 18px 25px}
+ .versus-cell img{max-height:330px}
+ .versus-cell--description{min-height:0;padding:60px 8px 8px}
+ .versus-cell--description iframe{height:clamp(460px,calc(47vw + 80px),600px)}
+}
+@media(max-width:560px){
+ :root{--week-title-size:26px}
+ .masthead{padding-top:25px;padding-bottom:40px;gap:12px}
+ .masthead h1{font-size:43px}
+ .project-banner{font-size:clamp(18px,5vw,24px)}
+ .section-heading--centered p{font-size:18px}
+ .versus-grid{grid-template-columns:1fr}
+ .versus-cell,.versus-cell:nth-child(even){border:2px solid var(--blue);min-height:400px}
+ .versus-cell--red,.versus-cell:nth-child(even){border-color:var(--red)}
+ .versus-cell:not(:first-child){border-top:0}
+ .versus-cell:nth-child(2){grid-row:3}
+ .versus-cell:nth-child(4){grid-row:4}
+ .versus-cell img{max-height:360px}
+ .versus-cell--description{min-height:0}
+ .versus-cell--description iframe{height:calc(100vw + 56px)}
+ .embed-cell{padding:8px}
+ .split-frame--demo .embed-cell iframe{height:760px}
+ .split-frame--final .embed-cell iframe{height:calc(100vw + 102px)}
+ .split-frame--comparison .embed-cell iframe{height:430px}
+ .split-frame--demo .media-cell--gif{min-height:330px}
+ .split-frame--final .media-cell--gif{padding-top:24px}
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="TecB Li — an interactive pathfinding process journal, from early maps to the Old Wise and Young Blood race.">
+  <title>TecB Li — Pathfinding Experiments</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <span class="masthead__line" aria-hidden="true"></span>
+      <h1>TecB Li</h1>
+      <span class="masthead__line" aria-hidden="true"></span>
+    </header>
+
+    <div class="project-banner">Project No.1 What is Intelligence?</div>
+
+    <section class="project-section" id="week-1" aria-labelledby="week-1-title">
+      <div class="section-heading"><h2 id="week-1-title">Week_1</h2></div>
+      <p class="week-description">Starting with Google Maps, I drew a flowchart of the entire system and tried to understand the simplest pathfinding algorithm.</p>
+      <div class="split-frame split-frame--square">
+        <figure class="media-cell"><img src="1.png" alt="Early grid map with blocked cells, a source, and a target" loading="lazy"></figure>
+        <figure class="media-cell"><img src="2.png" alt="Early hand-drawn route planning and feedback sketch" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="project-section" id="week-2" aria-labelledby="week-2-title">
+      <div class="section-heading section-heading--centered"><h2 id="week-2-title">Week_2</h2><p>Basic Algorithm</p></div>
+      <p class="week-description">Using the A* algorithm I researched in Week 1, I built the first demo. Written steps and scrolling text show how the code works.</p>
+      <div class="split-frame split-frame--demo">
+        <figure class="media-cell media-cell--gif"><img src="week2.gif" alt="Animated breadth-first search finding a route around blocked cells" loading="lazy"></figure>
+        <div class="embed-cell"><iframe src="demo/v1/index.html" title="Interactive Week 2 breadth-first search demo" loading="lazy"></iframe></div>
+      </div>
+    </section>
+
+    <section class="project-section" id="week-3" aria-labelledby="week-3-title">
+      <div class="section-heading section-heading--centered"><h2 id="week-3-title">Week_3</h2><p>Compared 2 Version</p></div>
+      <p class="week-description">I compared two versions: one visualizes the process, while the other directly presents three optimal routes. Which looks more intelligent?</p>
+      <div class="split-frame split-frame--comparison">
+        <figure class="media-cell"><img src="week3.gif" alt="Animated side-by-side comparison of a search process and its final result" loading="lazy"></figure>
+        <div class="embed-cell"><iframe src="demo/v2/index.html" title="Interactive Week 3 version comparison demo" loading="lazy"></iframe></div>
+      </div>
+    </section>
+
+    <section class="project-section" id="week-4-1" aria-labelledby="week-4-1-title">
+      <div class="section-heading section-heading--centered"><h2 id="week-4-1-title">Week_4_1</h2><p class="versus"><span class="dot dot--blue" aria-hidden="true"></span> VS <span class="dot dot--red" aria-hidden="true"></span></p></div>
+      <p class="week-description">A new world! Old Wise struggles to move, but gets every step right. Young Blood is very fast, yet seems to keep running into walls.</p>
+      <div class="versus-grid">
+        <article class="versus-cell versus-cell--blue">
+          <h3 class="role-tab">Old Wise</h3>
+          <img src="week4_1.gif" alt="Animation of Old Wise following a planned blue route" loading="lazy">
+        </article>
+        <article class="versus-cell versus-cell--red">
+          <h3 class="role-tab">Young Blood</h3>
+          <img src="week4_2.gif" alt="Animation of Young Blood exploring the grid in red" loading="lazy">
+        </article>
+        <article class="versus-cell versus-cell--blue versus-cell--description">
+          <h3 class="role-tab">Old Wise</h3>
+          <iframe src="demo/oldwise/index.html" title="Interactive Old Wise demo" loading="lazy"></iframe>
+        </article>
+        <article class="versus-cell versus-cell--red versus-cell--description">
+          <h3 class="role-tab">Young Blood</h3>
+          <iframe src="demo/youngblood/index.html" title="Interactive Young Blood demo" loading="lazy"></iframe>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section" id="week-4-2" aria-labelledby="week-4-2-title">
+      <div class="section-heading section-heading--centered"><h2 id="week-4-2-title">Week_4_2</h2><p class="versus"><span class="dot dot--blue" aria-hidden="true"></span> VS <span class="dot dot--red" aria-hidden="true"></span></p></div>
+      <p class="week-description">Which one is intelligent? Which one is more intelligent?</p>
+      <div class="split-frame split-frame--demo split-frame--final">
+        <figure class="media-cell media-cell--gif"><img src="week4.gif" alt="Animation of the final Old Wise versus Young Blood race" loading="lazy"></figure>
+        <div class="embed-cell"><iframe src="demo/index.html" title="Final interactive Old Wise versus Young Blood race" loading="lazy"></iframe></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
